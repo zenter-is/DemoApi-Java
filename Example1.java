@@ -8,12 +8,12 @@ import org.apache.http.util.EntityUtils;
 
 public class Example1
 {
-    public static void main(String[] args) {
-        String       postUrl       = "http://zenter.local/api/v2";
+    public static final String API_ENDPOINT = "http://zenter.local/api/v2";
 
+    public static void main(String[] args) {
         try {
             HttpClient   httpClient    = HttpClientBuilder.create().build();
-            HttpPost     post          = new HttpPost(postUrl);
+            HttpPost     post          = new HttpPost(API_ENDPOINT);
             StringEntity postingString = new StringEntity("{\"query\":\"query{  version}\"}");
             post.setEntity(postingString);
             post.setHeader("Content-type", "application/json");
