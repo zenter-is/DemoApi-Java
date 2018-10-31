@@ -78,10 +78,7 @@ public class GraphqlClient
 
             Type resultType = TypeToken.getParameterized(GraphqlResponse.class, type).getType();
 
-            //Type resultType = new TypeToken<GraphqlResponse<T>>() {}.getType();
-            GraphqlResponse<T> response = gson.fromJson(responseString, resultType);
-
-            return response;
+            return gson.fromJson(responseString, resultType);
 
         }catch (Exception ex)
         {
