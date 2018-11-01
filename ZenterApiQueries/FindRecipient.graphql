@@ -1,0 +1,8 @@
+query($email:String!){
+	recipients(email:$email)
+	{
+		id
+		name
+		email
+	}
+}

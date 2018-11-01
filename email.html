@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Zenter - Nýtt snið</title>
+	<style type="text/css">
+		#outlook a{
+			padding:0;
+		}
+		body{
+			width:100%;
+			background-color: #ffffff;
+		}
+		.ReadMsgBody{
+			width:100%;
+		}
+		.ExternalClass{
+			width:100%;
+		}
+		table
+		{
+			border-collapse: collapse;
+		}
+
+		@media only screen and (max-width: 640px)  {
+			.deviceWidth
+			{
+				width:95% !important;
+				padding: 0 !important;
+			}
+			.center
+			{
+				text-align: center!important;
+			}
+			img
+			{
+				width: 100% !important;
+			}
+		}
+
+		@media only screen and (max-width: 479px) {
+			.deviceWidth
+			{
+				width:95% !important;
+			}
+			.center
+			{
+				text-align: center!important;
+			}
+			img
+			{
+				width: 100% !important;
+			}
+		}
+	</style>
+</head>
+<body style="background-color: #ffffff; margin:0;padding:0">
+
+	<!-- EKKI EYÐA - KÓÐI FYRIR VAFRAÚTGÁFU -->
+	<table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="deviceWidth">
+	{if !$smarty.request.hide_browser_link}
+		<tr>
+			<td>
+				<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="deviceWidth">
+					<tr>
+						<td>{$job->pre_header}</td>
+					</tr>
+					<tr>
+
+						<td>
+							<a href="%viewbrowserlink%">Sérðu ekki tölvupóstinn? Smelltu hér.</a>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	{/if}
+	</table>
+
+	<!-- KÓÐINN ÞINN BYRJAR HÉR -->
+	<table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="deviceWidth">
+		<tr>
+			<td>
+				<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" class="deviceWidth">
+					<tr>
+						<td>ATH! Þetta snið er fyrir þá sem vilja forrita HTML sniðin sín sjálf(ir) og inniheldur eingöngu það sem þarf til að Zenter kerfið geti búið til vafraútgáfu og mælt linka og myndir.</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<!-- KÓÐINN ÞINN ENDAR HÉR -->
+
+	<!-- EKKI EYÐA - FOOTER -->
+	<table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="deviceWidth">
+		<tr>
+			<td>
+				<table width="600" align="center" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+					<tr>
+						<td><a href="%unregisterlink%">Afskrá af póstlista</a></td>
+					</tr>
+					<tr>
+						<td>Þessi tölvupóstur var sendur á netfangið <a href="mailto:%recipient%">%recipient%</a></td>
+					</tr>
+					<tr>
+						<td>Þessi póstur var sendur úr samskiptakerfi <a href="https://www.zenter.is">zenter.is</a></td>
+					</tr>
+					<tr>
+						<td>%tracking%</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+

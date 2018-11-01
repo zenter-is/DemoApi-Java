@@ -1,0 +1,9 @@
+mutation($name:String!, $email:String!)
+{
+  addRecipient(name:$name, email:$email)
+  {
+    id
+    name
+    email
+  }
+}

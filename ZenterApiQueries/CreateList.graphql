@@ -1,0 +1,8 @@
+mutation($title: String!)
+{
+	CreateList(title:$title)
+	{
+		id
+		title
+	}
+}

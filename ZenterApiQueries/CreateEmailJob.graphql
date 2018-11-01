@@ -1,0 +1,8 @@
+mutation($title: String!,$subject: String!, $templateId: Int!)
+{
+	CreateJob(title:$title, subject:$subject, templateId: $templateId)
+	{
+		id
+		title
+	}
+}

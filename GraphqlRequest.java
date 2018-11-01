@@ -1,6 +1,6 @@
 import java.util.Map;
 
-public class GraphqlRequest {
+public class GraphqlRequest<T> {
     public String query;
-    public Map<String, String> variables;
+    public Map<String, T> variables;
 }

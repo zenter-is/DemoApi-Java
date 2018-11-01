@@ -1,0 +1,8 @@
+
+query($title:String!) {
+  template(name:$title)
+  {
+    id
+    title
+  }
+}
