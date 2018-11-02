@@ -20,8 +20,8 @@ public class Example2
             System.exit(1);
         }
 
-
-        GraphqlClient.Job job = client.CreateEmailJob("Test","My subject");
+        int TemplateId = 1513;
+        Job job = client.CreateEmailJob("Test","My subject", TemplateId);
 
         System.out.println(job.id);
         System.out.println("Success!");
