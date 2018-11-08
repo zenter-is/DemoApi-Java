@@ -2,7 +2,11 @@
 
 .SUFFIXES: .class
 
+ifeq ($(OS),Windows_NT)
+CP=".;jars\*"
+else
 CP=".:jars/*"
+endif
 
 Example1: clean Example1.class
 	java  -cp $(CP) Example1
