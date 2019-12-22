@@ -1,0 +1,11 @@
+mutation CreateAsset($name:String!, $base64EncodedData:String!, $parentId:String!){
+    addAssetNode(name:$name, data:$base64EncodedData, parentId:$parentId)
+    {
+        id
+        parentId
+        title
+        mime
+        extension
+        fullPath
+    }
+}

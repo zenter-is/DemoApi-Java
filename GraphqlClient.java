@@ -292,4 +292,23 @@ public class GraphqlClient
 
         System.out.println(result.data.SendJob.sendStatus);
     }
+
+    public class CreateAssetQueryResponse
+    {
+        Asset addAssetNode;
+    }
+
+    public Asset CreateAsset(string filename, string base64EncodedData, int parentId)
+    {
+        GraphqlRequest q = new GraphqlRequest();
+        q.query = readFile("ZenterApiQueries/CreateAsset.graphql");
+        q.variables = new HashMap<String, String>();
+        q.variables.put("name", filename);
+        q.variables.put("base64EncodedData", base64EncodedData);
+        q.variables.put("parentId", parentId);
+
+        GraphqlResponse<CreateAssetQueryResponse> result = this.query(q, CreateAssetQueryResponse.class);
+
+        return result.data.addAssetNode;
+    }
 }
